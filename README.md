@@ -3,7 +3,7 @@
 A recipe discovery website where you can find, filter, save, and share your favorite recipes.
 
 ## 🌐 Live Site
-[View it here](your-deployed-link)
+https://recipe-website-avp7.onrender.com
 
 ## 📋 Features
 - Recipe grid with photos from TheMealDB
