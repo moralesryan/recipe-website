@@ -9,72 +9,73 @@
     <title>La Sazón - Home Page</title>
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/main.js" type="module"></script>
 
 </head>
 
 <body>
-    <header class="head">
-        <nav class="nav-container">
-            <a href="./index.html" class="nav-logo">La Sazón</a>
-            <ul class="nav-links">
-                <li><a href="./index.html" class="nav-link nav-link-active">Home</a></li>
-                <li><a href="./favorites.html" class="nav-link">Favorites</a></li>
-                <li><a href="/wisdom-drop.html" class="nav-link">Wisdom Drop</a></li>
+    <header>
+        <nav>
+            <a href="./index.html" class="logo">🍴 RecipeSite</a>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./favorites.html">Favorites</a></li>
+                <li><a href="./wisdomDrop.html">Wisdom Drop</a></li>
             </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </nav>
     </header>
 
+
     <main>
-        <section class="hero" aria-label="Hero section">
-            <div class="hero-slides" aria-hidden="true">
-                <div class="hero-slide hero-slide1"></div>
-                <div class="hero-slide hero-slide2"></div>
-                <div class="hero-slide hero-slide3"></div>
-            </div>
-            <div class="hero-overlay"></div>
-            <div class="hero-content-container">
-                <p class="hero-top">Discover | Cook | Share | Repeat
-                </p>
-                <h1 class="hero-title">Find your next<br /><em>favorite meal</em> </h1>
-                <p class="hero-subtitle">
-                    From quick weeknight dinners to gourmet feasts, our recipes are designed to inspire and delight.
-                    Whether you're a seasoned chef or just starting out, we have something for everyone. Explore our
-                    collection and let your culinary journey begin!
-                </p>
-                <div class="hero-actions">
-                    <a href="#recipe-grid" class="primary-btn">Browse Recipes</a>
-                    <button class="btn-surprise" id="surprise-btn" aria-label="Get a random recipe">Surprise
-                        Me!🎲 </button>
-                </div>
-            </div>
+        <section id="hero">
+            <h1>Find your next favorite meal</h1>
+            <p>From quick weeknight dinners to traditional cultural dishes — your next great recipe is one click away.
+            </p>
+            <a href="#recipes" class="btn-primary">Browse Recipes</a>
+            <button id="btn-surprise" class="btn-outline">🎲 Surprise Me</button>
         </section>
 
-        <section class="filters-section" aria-label="Search and filter recipes">
-            <div class="container">
-                <div class="filters">
-
-                    <!--Search bar goes here-->
-                    <div class="search-bar">
-                        <label for="search-input" class="search-label">Search Recipes:</label>
-                        <span class="search-bar-icon" aria-hidden="true">🔍</span>
-                        <input type="text" id="search-input" class="search-input" placeholder="Search recipes..."
-                            autocomplete="off" aria-label="Search recipes" />
-                        <button class="search-bar-clear" id="search-clear-btn" aria-label="Clear search input"
-                            hidden>✖</button>
-                    </div>
-
-                    
-                </div>
-            </div>
-
+        <section id="filters">
+            <input type="search" id="search-input" placeholder="Search recipes..." />
+            <div id="filter-categories"></div>
         </section>
+
+        <section id="recipes">
+            <h2>Recipes</h2>
+            <div id="recipe-grid"></div>
+        </section>
+
     </main>
+
+    <div id="modal-overlay" class="hidden">
+        <div id="recipe-modal">
+            <button id="btn-close-modal">✕</button>
+            <img id="modal-image" src="" alt="" />
+            <h2 id="modal-title"></h2>
+            <p id="modal-category"></p>
+            <p id="modal-area"></p>
+            <!-- reviews.mjs stars rating here -->
+            <div id="star-rating"></div>
+            <!-- recipePopUp.mjs maps ingredients here -->
+            <ul id="modal-ingredients"></ul>
+            <!-- recipePopUp.mjs gets recipe instructions here -->
+            <ol id="modal-instructions"></ol>
+            <!-- reviews.mjs gets some fake reviews here -->
+            <div id="modal-reviews"></div>
+            <!-- favorites.mjs controls this button -->
+            <button id="btn-favorite">🤍 Save to Favorites</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>🌶️ La Sazón</p>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./favorites.html">Favorites</a></li>
+            <li><a href="./wisdomDrop.html">Wisdom Drop</a></li>
+        </ul>
+    </footer>
+    <script src="scripts/main.js" type="module"></script>
+
 </body>
 
 </html>
