@@ -6,13 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favorites</title>
     <link rel="icon" href="images/favicon.png" type="image/png">
-    <script src="scripts/favorites.mjs" type="module"></script>
 
 
 </head>
 
 <body>
+    <header>
+        <nav>
+            <a href="./index.html" class="logo">🍴 RecipeSite</a>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./favorites.html">Favorites</a></li>
+                <li><a href="./wisdomDrop.html">Wisdom Drop</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section id="favorites">
+            <h1>Your Favorite Recipes</h1>
+            <div id="favorites-grid"></div>
+        </section>
+
+    </main>
+
+    <div id="modal" class="hidden">
+        <div id="modal-recipe">
+            <button id="btn-close-modal">x</button>
+            <img id="modal-image" src="" alt="" />
+            <h2 id="modal-title"></h2>
+            <p id="modal-category"></p>
+            <p id="modal-area"></p>
+            <!-- reviews.mjs stars rating here -->
+            <div id="star-rating"></div>
+            <!-- recipePopUp.mjs maps ingredients here -->
+            <ul id="modal-ingredients"></ul>
+            <!-- recipePopUp.mjs gets recipe instructions here -->
+            <ol id="modal-instructions"></ol>
+            <!-- reviews.mjs gets some fake reviews here -->
+            <div id="modal-reviews"></div>
+            <button id="btn-favorite">🤍 Save to Favorites</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>🌶️ La Sazón</p>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./favorites.html">Favorites</a></li>
+            <li><a href="./wisdomDrop.html">Wisdom Drop</a></li>
+        </ul>
+    </footer>
 </body>
+<script src="scripts/favorites.mjs" type="module"></script>
 
 </html>
