@@ -4,13 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discover the best recipes in the world. Filter your preferences by difficulty and let us surprise you with random recipes">
     <title>La Sazón - Home Page</title>
     <link rel="icon" href="images/favicon.png" type="image/png">
-    <script src="scripts/main.js" type="module"></script>
+    <link rel="stylesheet" href="styles/styles.css">
 
 </head>
 
 <body>
+    <header>
+        <nav>
+            <a href="./index.html" class="logo">🍴 RecipeSite</a>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./favorites.html">Favorites</a></li>
+                <li><a href="./wisdomDrop.html">Wisdom Drop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section id="hero">
+            <h1>Find your next favorite meal</h1>
+            <p>From quick weeknight dinners to traditional cultural dishes — your next great recipe is one click away.
+            </p>
+            <a href="#recipes" class="btn-primary">Browse Recipes</a>
+            <button id="btn-surprise" class="btn-outline">🎲 Surprise Me</button>
+        </section>
+
+        <section id="filters">
+            <input type="search" id="search-input" placeholder="Search recipes..." />
+            <div id="filter-categories"></div>
+        </section>
+
+        <section id="recipes">
+            <h2>Recipes</h2>
+            <div id="recipe-grid"></div>
+        </section>
+
+    </main>
+
+    <div id="modal-overlay" class="hidden">
+        <div id="recipe-modal">
+            <button id="btn-close-modal">✕</button>
+            <img id="modal-image" src="" alt="" />
+            <h2 id="modal-title"></h2>
+            <p id="modal-category"></p>
+            <p id="modal-area"></p>
+            <!-- reviews.mjs stars rating here -->
+            <div id="star-rating"></div>
+            <!-- recipePopUp.mjs maps ingredients here -->
+            <ul id="modal-ingredients"></ul>
+            <!-- recipePopUp.mjs gets recipe instructions here -->
+            <ol id="modal-instructions"></ol>
+            <!-- reviews.mjs gets some fake reviews here -->
+            <div id="modal-reviews"></div>
+            <!-- favorites.mjs controls this button -->
+            <button id="btn-favorite">🤍 Save to Favorites</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>🌶️ La Sazón</p>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./favorites.html">Favorites</a></li>
+            <li><a href="./wisdomDrop.html">Wisdom Drop</a></li>
+        </ul>
+    </footer>
+    <script src="scripts/main.js" type="module"></script>
 
 </body>
 
