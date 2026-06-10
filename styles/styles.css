@@ -1,7 +1,3 @@
-/* =============================================
-   COOKING RECIPES SITE — styles.css
-   ============================================= */
-
 /* ---- CSS VARIABLES ---- */
 :root {
     --color-primary: #1D9E75;
@@ -94,6 +90,8 @@ nav {
 .logo {
     display: flex;
     align-items: center;
+    font-size: 3rem;
+    font-family: var(--font-heading);
 }
 
 .logo-img {
@@ -103,7 +101,7 @@ nav {
     transition: transform var(--transition), opacity var(--transition);
 }
 
-.logo:hover .logo-img {
+.logo:hover {
     transform: scale(1.05);
     opacity: 0.9;
 }
