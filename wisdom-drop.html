@@ -22,7 +22,29 @@
     </header>
 
     <main>
+        <section id="wisdom-drop">
+            <h1>Wisdom Drop</h1>
+            <p>Wanna share your best recipes with others? Drop it here!👇</p>
 
+            <form id="wisdom-form">
+                <input type="text" id="recipe-name" placeholder="Recipe Name" required />
+                <label for="recipe-category">Category</label>
+                <select id="recipe-category" name="recipe-category">
+                    <option value="">-- Select a category --</option>
+                    <option value="Beef">Beef</option>
+                    <option value="Chicken">Chicken</option>
+                    <option value="Seafood">Seafood</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="Dessert">Dessert</option>
+                    <option value="Pasta">Pasta</option>
+                    <option value="Other">Other</option>
+                    <p class="error-msg" id="error-category"></p>
+
+                </select> <input type="text" id="recipe-area" placeholder="Area (e.g., Italian, Mexican)" required />
+                <textarea id="recipe-ingredients" placeholder="Ingredients (comma-separated)" required></textarea>
+                <textarea id="recipe-instructions" placeholder="Instructions" required></textarea>
+                <button type="submit">Submit Recipe</button>
+        </section>
     </main>
 
     <footer>
