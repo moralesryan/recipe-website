@@ -15,3 +15,5 @@ export function initFilters(categories) {
     setupSearchBar();
 
 }
+
+//continue here, build the category buttons and add event listeners to them!!!!‼️🦧
