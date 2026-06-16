@@ -109,3 +109,17 @@ function applySearch() {
 
     renderGrid(filtered);
 }
+
+//showLoadingCards(grid)
+function showLoadingCards(grid) {
+    grid.innerHTML = "";
+    for (let i = 0; i < 6; i++) {
+        grid.innerHTML += `
+        <div class="recipe-loading-card">
+            <div class="card-img"></div>
+            <div class="card-line"></div>
+            <div class="card-shorter-line"></div>
+        </div>
+        `;
+    }
+}
