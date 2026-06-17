@@ -1,7 +1,7 @@
 //working on the popups/modals
 import { fetchMealById } from "./api.js";
 
-export function initPopUp() {
+export function initPopup() {
     const grid = document.querySelector("#recipe-grid");
     const overlay = document.querySelector("#modal-overlay");
     const btnClose = document.querySelector("#btn-close-modal");
@@ -29,7 +29,9 @@ export function initPopUp() {
     });
 
     //close the modal when pressing the Esc key
-    document.addEventListener("click", (e) => {
+    document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") closePopup();
-        });
+    });
 }
+
+//im here
