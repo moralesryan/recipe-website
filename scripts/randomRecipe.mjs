@@ -1,6 +1,6 @@
 //surprise me button
 
-import { fetchRandomMeal } from "./api";
+import { fetchRandomMeal } from "./api.js";
 import { closePopup } from "./recipePopUp.mjs";
 
 //initRandomRecipe
@@ -53,7 +53,7 @@ export function initRandomRecipe() {
         instructionsList.innerHTML = "";
         const steps = meal.strInstructions
             .split("/n")
-            .filter((step) => step.trim() !== "";
+            .filter((step) => step.trim() !== "");
         steps.forEach((step) => {
             const li = document.createElement("li");
             li.textContent = step.trim();

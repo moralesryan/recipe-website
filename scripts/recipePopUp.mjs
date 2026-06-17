@@ -36,7 +36,7 @@ export function initPopups() {
 
 //openPopup(mealId)
 async function openPopup(mealId) {
-    const overlay = document.querySelector(| "#modal-overlay");
+    const overlay = document.querySelector("#modal-overlay");
 
     overlay.classList.remove("hidden");
     document.body.style.overflow = "hidden"; //this is to prevent background scrolling!
@@ -69,8 +69,8 @@ function populateModal(meal) {
     const ingredientsList = document.querySelector("#modal-ingredients");
     ingredientsList.innerHTML = "";
     for (let i = 1; i <= 20; i++) {
-        const ingredient = meal[`strIngredients ${i}`];
-        const measure = meal[`strMeasure ${i}`];
+        const ingredient = meal[`strIngredients${i}`];
+        const measure = meal[`strMeasure${i}`];
         if (!ingredient || ingredient.trim() === "") break;
         const li = document.createElement("li");
         li.textContent = `${measure ? measure.trim() : ""} ${ingredient.trim()}`;
@@ -81,8 +81,8 @@ function populateModal(meal) {
     const instructionsList = document.querySelector("#modal-instructions");
     instructionsList.innerHTML = "";
     const steps = meal.strInstructions
-        .split("/n")
-        .filter((step) => step.trim() !== "";
+        .split("\n")
+        .filter((step) => step.trim() !== "");
     steps.forEach((step) => {
         const li = document.createElement("li");
         li.textContent = step.trim();
@@ -104,20 +104,5 @@ export function closePopup() {
     document.querySelector("#modal-ingredients").innerHTML = "";
     document.querySelector("#modal-instructions").innerHTML = "";
     document.querySelector("#modal-reviews").innerHTML = "";
-    document.querySelector("#star-rating").innerHTML = "";.
-}
-
-async function openPopup(mealId) {
-    const overlay = document.querySelector("#modal-overlay");
-
-    overlay.classList.remove("hidden");
-    document.body.style.overflow = "hidden";
-
-    // Clear modal while loading... loading...
-    document.querySelector("#modal-title").textContent = "Loading...";
-    document.querySelector("#modal-image").src = "";
-    document.querySelector("#modal-ingredients").innerHTML = "";
-    document.querySelector("#modal-instructions").innerHTML = "";
-    document.querySelector("#modal-category").textContent = "";
-    document.querySelector("#modal-area").textContent = "";
+    document.querySelector("#star-rating").innerHTML = "";
 }
