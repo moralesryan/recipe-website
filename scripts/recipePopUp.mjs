@@ -1,7 +1,7 @@
 //working on the popups/modals
 import { fetchMealById } from "./api.js";
 
-export function initPopup() {
+export function initPopups() {
     const grid = document.querySelector("#recipe-grid");
     const overlay = document.querySelector("#modal-overlay");
     const btnClose = document.querySelector("#btn-close-modal");
