@@ -40,9 +40,9 @@ function buildCategoryButtons(categories) {
         if (!clickedButton) return;
 
         //update active style
-        filtersContainer.querySelectorAll("button").forEach(btn) => {
+        filtersContainer.querySelectorAll("button").forEach((btn) => {
             btn.classList.remove("active");
-        };
+        });
         clickedButton.classList.add("active");
 
         //update current category and fetch meals
