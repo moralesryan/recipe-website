@@ -20,8 +20,17 @@ document.addEventListener("DOMContentLoaded", async () => {
         //fetch categories and meals, then initialize filters and popups
         const categories = await fetchCategories();
         // initFilters(categories);
-        //fetch default meals for the` home page (Chicken category)
-        const defaultMeals = await fetchMealsByCategory("Chicken");
+        //fetch default meals for the` home page 
+        const [chicken, beef, seafood, dessert, pork] = await Promise.all([
+            fetchMealsByCategory("Chicken"),
+            fetchMealsByCategory("Beef"),
+            fetchMealsByCategory("Seafood"),
+            fetchMealsByCategory("Dessert"),
+            fetchMealsByCategory("Pork"),
+        ]);
+
+        const defaultMeals = [...chicken, ...beef, ...seafood, ...dessert, ...pork];
+   
         renderGrid(defaultMeals);
         //initialize popups
         initPopups();
