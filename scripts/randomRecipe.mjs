@@ -52,7 +52,7 @@ export function initRandomRecipe() {
         const instructionsList = document.querySelector("#modal-instructions");
         instructionsList.innerHTML = "";
         const steps = meal.strInstructions
-            .split("/n")
+            .split("\n")
             .filter((step) => step.trim() !== "");
         steps.forEach((step) => {
             const li = document.createElement("li");
