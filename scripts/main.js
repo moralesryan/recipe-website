@@ -5,7 +5,7 @@ import { fetchCategories, fetchMealsByCategory } from "./api.js";
 import { initPopups } from "./recipePopUp.mjs";
 import { initFavorites } from "./favorites.mjs";
 import { initRandomRecipe } from "./randomRecipe.mjs";
-//import { initReviews } from "./reviews.mjs";
+import { initReviews } from "./reviews.mjs";
 //import { initWisdomDrop } from "./wisdom-drop.mjs";
 
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         ]);
 
         const defaultMeals = [...chicken, ...beef, ...seafood, ...dessert, ...pork];
-   
+
         renderGrid(defaultMeals);
         //initialize popups
         initPopups();
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         //initialize random recipe
         initRandomRecipe();
         //initialize reviews
-        //    initReviews();
+        initReviews();
     }
 
     // this will start running the functions to initialize the favorites page if the user is on the favorites page
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         //initialize popups here
         initPopups();
         //initialize reviews here
-        // initReviews();
+        initReviews();
     }
 
     //this will run the wisdom drop functions if the user is on the wisdom drop page
