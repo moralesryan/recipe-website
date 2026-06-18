@@ -6,7 +6,7 @@ import { initPopups } from "./recipePopUp.mjs";
 import { initFavorites } from "./favorites.mjs";
 import { initRandomRecipe } from "./randomRecipe.mjs";
 import { initReviews } from "./reviews.mjs";
-//import { initWisdomDrop } from "./wisdom-drop.mjs";
+import { initWisdomDrop } from "./wisdom-drop.mjs";
 
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (isHomePage) {
         //fetch categories and meals, then initialize filters and popups
         const categories = await fetchCategories();
-        // initFilters(categories);
+        //initFilters(categories);
         //fetch default meals for the` home page 
         const [chicken, beef, seafood, dessert, pork] = await Promise.all([
             fetchMealsByCategory("Chicken"),
