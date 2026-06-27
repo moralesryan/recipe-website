@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (isHomePage) {
         //fetch categories and meals, then initialize filters and popups
         const categories = await fetchCategories();
-        // initFilters(categories);
+        //initFilters(categories);
         //fetch default meals for the` home page 
         const [chicken, beef, seafood, dessert, pork] = await Promise.all([
             fetchMealsByCategory("Chicken"),
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             fetchMealsByCategory("Pork"),
         ]);
 
-        const defaultMeals = [...chicken, ...beef, ...seafood, ...dessert, ...pork];
+        const defaultMeals = [...beef, ...seafood, ...dessert, ...chicken, ...pork];
 
         renderGrid(defaultMeals);
         //initialize popups
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     //this will run the wisdom drop functions if the user is on the wisdom drop page
     if (isWisdomDropPage) {
         //initialize wisdom drop
-        initWisdomDrop();
+        //initWisdomDrop();
 
     }
 
